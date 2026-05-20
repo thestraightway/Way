@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Way — статьи, лекции, циклы</title>
-  <meta name="description" content="Way — библиотека полезных материалов: статьи, циклы и аудио-лекции." />
+  <title>The Straight Way — статьи, лекции, циклы</title>
+  <meta name="description" content="The Straight Way — библиотека материалов: статьи, циклы и аудио-лекции." />
   <meta name="robots" content="index, follow" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -14,14 +14,14 @@
 <body>
   <header class="topbar">
     <div class="container nav">
-      <a class="brand" href="/" aria-label="На главную">
+      <a class="brand" href="index.html" aria-label="На главную">
         <span class="brand-icon">▦</span>
-        <span><strong>Way</strong><small>статьи · лекции · циклы</small></span>
+        <span><strong>Way</strong><small>The Straight Way</small></span>
       </a>
-      <nav class="nav-links">
-        <a href="#sections">Разделы</a>
-        <a href="#privacy">Принципы</a>
-        <a href="#start">Начать</a>
+      <nav class="nav-links" aria-label="Главное меню">
+        <a class="active" href="index.html#sections">Разделы</a>
+        <a class="" href="about.html">О проекте</a>
+        <a class="" href="audio.html">Аудио</a>
       </nav>
     </div>
   </header>
@@ -30,76 +30,83 @@
     <section class="hero">
       <div>
         <h1>Way</h1>
+        <p class="hero-subtitle">Быть может, здесь находится польза.</p>
         <div class="actions">
           <a class="button primary" href="#sections">Смотреть разделы</a>
-          <a class="button secondary" href="#privacy">Как устроена защита</a>
         </div>
       </div>
     </section>
 
     <section id="sections" class="section-block">
       <div class="section-title">
-        <div><h2>Разделы</h2><p>Каждый раздел раскрывается в главы. Позже к главам можно добавить аудио и конспекты.</p></div>
-        <label class="search"><span>⌕</span><input id="searchInput" placeholder="Поиск по главам" /></label>
+        <div><h2>Разделы</h2></div>
+        <div class="search-wrap">
+          <label class="search"><span>⌕</span><input id="searchInput" placeholder="Поиск по сайту" autocomplete="off" /></label>
+          <div id="searchResults" class="search-results" aria-live="polite"></div>
+        </div>
       </div>
 
       <div class="accordion" id="accordion">
-        <article class="panel open" data-search="как правильно жениться мужчина женщина жена брак семья">
+        <article class="panel open" data-search="как правильно жениться мужчина женщина жена брак семья супруга сватовство критерии оценка">
           <button class="panel-head" type="button">
-            <span><em>Цикл · 15 глав</em><strong>Как правильно жениться?</strong><small>Практический и ценностный разбор подготовки к браку, выбора супруги, критериев оценки и защиты семьи от разрушительных идей.</small></span>
+            <span><em>Цикл · 15 глав</em><strong>Как правильно жениться?</strong><small>Структура цикла и переход к главам.</small></span>
             <i>⌄</i>
           </button>
           <div class="panel-body">
+            <a class="section-link" href="marriage.html">Открыть страницу раздела</a>
             <ol class="chapter-grid">
-              <li><a href="chapter1.html">Общая характеристика благого мужчины</a></li>
-              <li>Кто такая благая женщина</li>
-              <li>Где и как искать хорошую жену</li>
-              <li>Алгоритм поиска и оценки кандидатуры</li>
-              <li>Почему не всякая мусульманка пригодна для брака</li>
-              <li>Новая эпоха: женщина как цель и инструмент разрушения семьи</li>
-              <li>Подлинное и фиктивное саморазвитие женщин</li>
-              <li>Лучшая работа женщины — быть хорошей женой и мамой</li>
-              <li>Градация уровней пригодности женщины в жёны</li>
-              <li>На ком точно не следует жениться</li>
-              <li>Почему женщины выставляют себя напоказ</li>
-              <li>Непокорность, психология и воспитание взглядов</li>
-              <li>Разбор явления психологов на примерах</li>
-              <li>Как выявлять и бороться с деструктивными идеями</li>
-              <li>Отношение к проблемам</li>
+              <li><a href="chapter1.html">Общая характеристика благих людей. Кто такой благой мужчина?</a></li>
+              <li><a href="marriage.html#chapter-2">Кто такая благая женщина? Два ключевых качества благой женщины. Эшелонирование приоритетов.</a></li>
+              <li><a href="marriage.html#chapter-3">Где и как искать хорошую жену?</a></li>
+              <li><a href="marriage.html#chapter-4">Алгоритм поиска и оценки конкретной кандидатуры. Какие параметры оценивать и как? На что смотреть? Внешность, её место и система её оценки.</a></li>
+              <li><a href="marriage.html#chapter-5">Почему не всякая «мусульманка» пригодна для брака?</a></li>
+              <li><a href="marriage.html#chapter-6">Новая эпоха – женщина как главная цель и инструмент по разрушению семьи мусульман. Инструменты Иблиса направленные на растление женщин. Кинематограф. Социальные сети. Саморазвитие. Карьеризм. «А что если?»</a></li>
+              <li><a href="marriage.html#chapter-7">Мусульманки в контексте саморазвития. Подлинное и фиктивное саморазвитие женщин.</a></li>
+              <li><a href="marriage.html#chapter-8">Лучшая работа женщины – быть хорошей женой и мамой.</a></li>
+              <li><a href="marriage.html#chapter-9">Градация уровней пригодности женщины в жёны для мусульманина. От кандидатур худших, к подающим надежды и лучшим. Понятия женщин постмодерна, модерна, традиции и откровения.</a></li>
+              <li><a href="marriage.html#chapter-10">На ком точно не следует жениться из числа мусульманок. Многочисленные факторы, свидетельствующие о том, что конкретную девушку не следует брать в жёны, если ты мусульманин и твоя цель 51:56.</a></li>
+              <li><a href="marriage.html#chapter-11">Почему вообще женщины выставляют себя напоказ?</a></li>
+              <li><a href="marriage.html#chapter-12">Кто такая непокорная кадавра и какое место занимают психологи в её воспитании?</a></li>
+              <li><a href="marriage.html#chapter-13">Разбор явления психологов на конкретных примерах. Шаблонные женщины. Почему они такие? Коротко про маркетинг и то, как нас прошивают на разные идеи. Либо ты привержен религии Аллаха, либо тому, что скармливает тебе шайтан.</a></li>
+              <li><a href="marriage.html#chapter-14">Как выявлять и бороться с деструктивными идеями в своём уме и умах своей семьи?</a></li>
+              <li><a href="marriage.html#chapter-15">Отношение к проблемам.</a></li>
             </ol>
           </div>
         </article>
 
         <article class="panel" data-search="семья воспитание дети отец мать дом">
           <button class="panel-head" type="button">
-            <span><em>Скоро · 4 главы</em><strong>Семья и воспитание</strong><small>Материалы о семейной ответственности, воспитании детей, дисциплине, мягкости и защите домашней среды.</small></span>
+            <span><em>Скоро</em><strong>Семья и воспитание</strong><small>Будущий раздел для материалов о семье, воспитании и домашней среде.</small></span>
             <i>⌄</i>
           </button>
-          <div class="panel-body"><ol class="chapter-grid"><li>Основы воспитания</li><li>Дом как крепость</li><li>Роль отца</li><li>Роль матери</li></ol></div>
+          <div class="panel-body">
+            <ol class="chapter-grid"><li>Основы воспитания</li><li>Дом как крепость</li><li>Роль отца</li><li>Роль матери</li></ol>
+          </div>
         </article>
 
-        <article class="panel" data-search="аудио лекции скачать серии избранное">
+        <article class="panel" data-search="аудио лекции скачать серии избранное запись mp3">
           <button class="panel-head" type="button">
-            <span><em>Формат · 4 главы</em><strong>Аудио-лекции</strong><small>Будущий раздел для коротких и длинных аудио: лекции, разборы, ответы, серии по темам.</small></span>
+            <span><em>Формат</em><strong>Аудио-лекции</strong><small>Страница под аудио, серии и будущие записи.</small></span>
             <i>⌄</i>
           </button>
-          <div class="panel-body"><ol class="chapter-grid"><li>Последние лекции</li><li>Серии</li><li>Избранное</li><li>Скачать офлайн</li></ol></div>
+          <div class="panel-body">
+            <a class="section-link" href="audio.html">Открыть аудио-раздел</a>
+            <ol class="chapter-grid"><li>Последние лекции</li><li>Серии</li><li>Избранное</li><li>Скачать офлайн</li></ol>
+          </div>
         </article>
       </div>
     </section>
-
-    <section id="privacy" class="cards">
-      <div class="info-card"><h3>Анонимность</h3><p>Не публикуем имя, фото, личные соцсети, почту и любые метки, ведущие к автору.</p></div>
-      <div class="info-card"><h3>Безопасность</h3><p>Первый этап — только статические страницы. Никаких форм, кабинетов, платежей и комментариев.</p></div>
-      <div class="info-card"><h3>Польза</h3><p>Контент подаётся аккуратно: разделы, главы, краткое описание, аудио и материалы для скачивания позже.</p></div>
-    </section>
-
-    <section id="start" class="final-card">
-      <h2>Следующий шаг</h2>
-      <p>Подготовить первую реальную страницу раздела: вступление, список глав, текст первой главы и место под аудио. После этого сайт можно выгрузить на статический хостинг.</p>
-    </section>
   </main>
 
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <strong>Way</strong>
+        <span>The Straight Way</span>
+      </div>
+      <a href="https://t.me/wayofminelife" target="_blank" rel="noopener noreferrer">t.me/wayofminelife</a>
+    </div>
+  </footer>
   <script src="script.js"></script>
 </body>
 </html>
