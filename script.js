@@ -185,3 +185,37 @@ if (searchInput && searchResults) {
     }
   });
 }
+
+
+// Compact smart header: hides while scrolling down and returns on scroll up.
+(() => {
+  const header = document.querySelector('.topbar');
+  if (!header) return;
+
+  let lastY = window.scrollY || 0;
+  let ticking = false;
+
+  const updateHeader = () => {
+    const currentY = window.scrollY || 0;
+    const goingDown = currentY > lastY;
+    const pastHeader = currentY > 90;
+
+    if (goingDown && pastHeader) {
+      header.classList.add('is-hidden');
+    } else {
+      header.classList.remove('is-hidden');
+    }
+
+    lastY = Math.max(currentY, 0);
+    ticking = false;
+  };
+
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(updateHeader);
+      ticking = true;
+    }
+  }, { passive: true });
+
+  window.addEventListener('focus', () => header.classList.remove('is-hidden'));
+})();
